@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://cp5mw8mk6ahaq"]
+
+[ext_resource type="Script" uid="uid://cwhynfj3cxrhg" path="res://ball.gd" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://cg418mpquegyq" path="res://game.gd" id="1_ryrav"]
+[ext_resource type="Texture2D" uid="uid://cfkj4vp7jkirh" path="res://sprites/kangaskhan_1500x1100_transparent.png" id="3_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://j7jp8fv8aaly" path="res://sprites/kangaskhan_transparent.png" id="3_215e1"]
+[ext_resource type="Texture2D" uid="uid://dcq8o1g6mcx4t" path="res://sprites/floor.png" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://rlphpv7wm52r" path="res://star.gd" id="4_7jktm"]
+[ext_resource type="Script" uid="uid://b3lvjs0ajpaqv" path="res://bomb.gd" id="7_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://onlfy5oocrfj" path="res://sprites/rocket ball.png" id="8_215e1"]
+[ext_resource type="Script" uid="uid://dwsf11dsxg2am" path="res://ice.gd" id="9_215e1"]
+[ext_resource type="Texture2D" uid="uid://cqgtn4rtjnkgv" path="res://canvas/game_over_screen.png" id="9_vef74"]
+[ext_resource type="Texture2D" uid="uid://pg3quuuon3yi" path="res://canvas/restart_button.png" id="10_hve3p"]
+[ext_resource type="Texture2D" uid="uid://bqtguk1m4lsv2" path="res://sprites/ice.png" id="11_mfdv2"]
+[ext_resource type="Script" uid="uid://df2mw3ma4qauo" path="res://fire.gd" id="13_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://pqxtq3xr83dc" path="res://sprites/ember.png" id="14_80cx4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fc0e3"]
+radius = 63.15061
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(1204.75, 69.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eow3j"]
+radius = 20.024984
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hve3p"]
+radius = 25.019993
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iotsf"]
+radius = 38.013157
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfdv2"]
+texture = ExtResource("10_hve3p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hve3p"]
+texture = ExtResource("10_hve3p")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8heu"]
+radius = 22.0
+height = 58.0
+
+[node name="Game" type="Node2D" unique_id=1995502021]
+script = ExtResource("1_ryrav")
+
+[node name="Ball" type="CharacterBody2D" parent="." unique_id=1822478534]
+position = Vector2(324, 184)
+script = ExtResource("1_e2o6t")
+metadata/Player = false
+metadata/Playr = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=2056916535]
+position = Vector2(-61.5, -98)
+scale = Vector2(0.05378487, 0.070397116)
+texture = ExtResource("3_7sc4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1934002613]
+position = Vector2(-57, -101)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_fc0e3")
+debug_color = Color(0.8088083, 0.40621147, 0.21446604, 0.41960785)
+
+[node name="EffectLabel" type="Label" parent="." unique_id=268714187]
+offset_left = 36.0
+offset_top = 62.0
+offset_right = 76.0
+offset_bottom = 85.0
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1572618990]
+position = Vector2(312, 333)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2027265510]
+position = Vector2(289.49997, 203)
+scale = Vector2(0.95377606, 0.3388672)
+texture = ExtResource("3_feb5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1037970149]
+position = Vector2(285.625, 233.875)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Star" type="Area2D" parent="." unique_id=974263236]
+script = ExtResource("4_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Star" unique_id=354877124]
+position = Vector2(94.99994, 114.99994)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_215e1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Star" unique_id=33860798]
+position = Vector2(94, 116)
+shape = SubResource("CircleShape2D_eow3j")
+debug_color = Color(0.5763058, 0.5539114, 7.70092e-07, 0.41960785)
+
+[node name="Khangaskan" type="Label" parent="." unique_id=999431205]
+custom_minimum_size = Vector2(1, 1)
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 195.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+horizontal_alignment = 2
+
+[node name="Bomb" type="Area2D" parent="." unique_id=1158843103]
+position = Vector2(-191, 77)
+script = ExtResource("7_j5wjh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bomb" unique_id=1466829900]
+position = Vector2(1117.5, 85.00001)
+scale = Vector2(0.044531222, 0.040593293)
+texture = ExtResource("8_215e1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb" unique_id=553836020]
+position = Vector2(1117, 85)
+shape = SubResource("CircleShape2D_hve3p")
+
+[node name="Ice" type="Area2D" parent="." unique_id=1093358447]
+position = Vector2(-88, -171)
+script = ExtResource("9_215e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ice" unique_id=751454733]
+position = Vector2(747, 533)
+scale = Vector2(0.154, 0.1)
+texture = ExtResource("11_mfdv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ice" unique_id=590833740]
+position = Vector2(740, 538)
+shape = SubResource("CircleShape2D_iotsf")
+
+[node name="GameOverUI" type="CanvasLayer" parent="." unique_id=767946748]
+visible = false
+follow_viewport_scale = 1000.0
+
+[node name="Control" type="Control" parent="GameOverUI" unique_id=2039605543]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverUI/Control" unique_id=651737728]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="GameOverUI/Control/CenterContainer" unique_id=2124812976]
+custom_minimum_size = Vector2(1200, 650)
+layout_mode = 2
+texture = ExtResource("9_vef74")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverUI/Control/CenterContainer/TextureRect" unique_id=297850548]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -61.5
+offset_right = 120.5
+offset_bottom = 61.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GameOverText" type="Label" parent="GameOverUI/Control/CenterContainer/TextureRect/VBoxContainer" unique_id=547156321]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Score: 0"
+
+[node name="Restart" type="Button" parent="GameOverUI/Control/CenterContainer/TextureRect/VBoxContainer" unique_id=595948424]
+process_mode = 3
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_mfdv2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hve3p")
+
+[node name="Fire" type="Area2D" parent="." unique_id=522547890]
+position = Vector2(-487, -157)
+script = ExtResource("13_7sc4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fire" unique_id=2096364101]
+position = Vector2(911, 598)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_80cx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire" unique_id=1986998297]
+position = Vector2(910, 602)
+shape = SubResource("CapsuleShape2D_e8heu")
+
+[connection signal="body_entered" from="Star" to="Star" method="_on_body_entered"]
+[connection signal="body_entered" from="Bomb" to="Bomb" method="_on_body_entered"]
+[connection signal="body_entered" from="Ice" to="Ice" method="_on_body_entered"]
+[connection signal="pressed" from="GameOverUI/Control/CenterContainer/TextureRect/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="body_entered" from="Fire" to="Fire" method="_on_body_entered"]

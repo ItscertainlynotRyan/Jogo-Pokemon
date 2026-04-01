@@ -1,0 +1,27 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774999178
+ball.gd::GDScript::6332927272644270672::1774720685::0::1::::<>CharacterBody2D<><>0<>0<><>::
+bomb.gd::GDScript::4375708573898935293::1774699176::0::1::::<>Area2D<><>0<>0<><>::
+fire.gd::GDScript::7566713849239024646::1774720674::0::1::::<>Area2D<><>0<>0<><>::
+game.gd::GDScript::5255479611299046008::1774732355::0::1::::<>Node2D<><>0<>0<><>::
+game.tscn::PackedScene::5888374998261582940::1774999178::0::1::::<><><>0<>0<><>::uid://cwhynfj3cxrhg::::res://ball.gd<>uid://cg418mpquegyq::::res://game.gd<>uid://cfkj4vp7jkirh::::res://sprites/kangaskhan_1500x1100_transparent.png<>uid://j7jp8fv8aaly::::res://sprites/kangaskhan_transparent.png<>uid://dcq8o1g6mcx4t::::res://sprites/floor.png<>uid://rlphpv7wm52r::::res://star.gd<>uid://b3lvjs0ajpaqv::::res://bomb.gd<>uid://onlfy5oocrfj::::res://sprites/rocket ball.png<>uid://dwsf11dsxg2am::::res://ice.gd<>uid://cqgtn4rtjnkgv::::res://canvas/game_over_screen.png<>uid://pg3quuuon3yi::::res://canvas/restart_button.png<>uid://bqtguk1m4lsv2::::res://sprites/ice.png<>uid://df2mw3ma4qauo::::res://fire.gd<>uid://pqxtq3xr83dc::::res://sprites/ember.png
+ice.gd::GDScript::8740926797384808600::1774719811::0::1::::<>Area2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D::7968722327326947584::1774699176::1774699176::1::::<><><>0<>0<>210089327f94e007310510a00a1af6d5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+score.gd::GDScript::2164599271413442830::1774699176::0::1::::<>Label<><>0<>0<><>::
+star.gd::GDScript::1216842574365024415::1774997957::0::1::::<>Area2D<><>0<>0<><>::
+::res://canvas/::1774995918
+game_over_screen.png::CompressedTexture2D::5909427520617057441::1774699176::1774699176::1::::<><><>0<>0<>3bd77d6df14a8e46adea1bdcc5069fdd<>res://.godot/imported/game_over_screen.png-27f1aef9403498733e081e86ff03b3f8.ctex::
+restart_button.png::CompressedTexture2D::1066948651885836272::1774699176::1774699176::1::::<><><>0<>0<>dcec61792649eb33fd76e3531ee312c7<>res://.godot/imported/restart_button.png-835b17aca75d7929e034042b940fa665.ctex::
+::res://sprites/::1775001820
+ball.png::CompressedTexture2D::6406265503087767397::1774998236::1774998239::1::::<><><>0<>0<>0dc2db3f20f16ea578fe55890de2d5fb<>res://.godot/imported/ball.png-dbfca04ee0bd630c71df985dd5b09bcc.ctex::
+bomb.png::CompressedTexture2D::1613143894854829922::1774699176::1774699176::1::::<><><>0<>0<>de253c02295f82745ef86add83e01d16<>res://.godot/imported/bomb.png-e64aff15375a44d3869552d2ac455436.ctex::
+ember.png::CompressedTexture2D::1087294004250451792::1774711393::1774711936::1::::<><><>0<>0<>cae395fdac3faa5bb4345a9dd47211c8<>res://.godot/imported/ember.png-166236ff5ac732fd9c0d358654e02b0b.ctex::
+floor.png::CompressedTexture2D::7334699820596856825::1774699176::1774699176::1::::<><><>0<>0<>f24490f17f853190cbbb019678d2ae25<>res://.godot/imported/floor.png-8870646e23ec8c3ad77089faabc9e773.ctex::
+heavy.png::CompressedTexture2D::8526959366124073769::1774711402::1774711936::1::::<><><>0<>0<>2b024662eadc54cc3f2a7ff084dad78e<>res://.godot/imported/heavy.png-fcf81f926f3522af6b973e0b4f0b765b.ctex::
+ice.png::CompressedTexture2D::3549065943046300629::1774711407::1774711936::1::::<><><>0<>0<>43f79594f9722d91982568c2d44e1ab9<>res://.godot/imported/ice.png-0c1ed6b8c4de11f3b863ad9105ae6ec3.ctex::
+kangaskhan_1500x1100_transparent.png::CompressedTexture2D::5145028731703884681::1775001820::1775001829::1::::<><><>0<>0<>1624c34fffc0bab6f08e8f209ca4ce30<>res://.godot/imported/kangaskhan_1500x1100_transparent.png-09f91aef648b42524caccb1ea2023954.ctex::
+kangaskhan_transparent.png::CompressedTexture2D::698334662708496126::1774996794::1774998032::1::::<><><>0<>0<>fdd75ffc78db26903f241324eebe5335<>res://.godot/imported/kangaskhan_transparent.png-851f16efa391cb25fdfd9d64c60f135a.ctex::
+light.png::CompressedTexture2D::6421787982550752800::1774711410::1774711936::1::::<><><>0<>0<>7fd4f30c26bc11b66f25634208bc374f<>res://.godot/imported/light.png-191c2812e8968dabd6c4fd26c78b4e95.ctex::
+power.png::CompressedTexture2D::7392121551949064019::1774711416::1774711936::1::::<><><>0<>0<>d14c3924b6461b9a8da99173c383fed8<>res://.godot/imported/power.png-5efa3d4705ebe267dac8deba72f7204d.ctex::
+rocket ball.png::CompressedTexture2D::1010158845184625063::1774998810::1774998813::1::::<><><>0<>0<>46aa0bb5c188738175e1e80115087583<>res://.godot/imported/rocket ball.png-6ad84a0e3e982f2771475328e99814d2.ctex::
+star.png::CompressedTexture2D::5620254128591733975::1774699176::1774699176::1::::<><><>0<>0<>4be3f51c044842f06f24ee23e2324d0d<>res://.godot/imported/star.png-b168e13ae1f9d03011573f475e49f2fb.ctex::
