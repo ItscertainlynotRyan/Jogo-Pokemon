@@ -63,7 +63,7 @@ func reset_effect():
 func add_score():
 	print("Adicionando score...")
 	score += 1
-	score_label.text = "Score: " + str(score)
+	score_label.text = "Khangaskan: " + str(score)
 
 # ------------------ GAME OVER ------------------
 func game_over():
