@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c1pt7gwnjq5p7"]
+
+[ext_resource type="Script" uid="uid://b4vardpt42v3i" path="res://mewtwo.gd" id="1_bt768"]
+[ext_resource type="Texture2D" uid="uid://bwnjbpur3haep" path="res://sprites/Mewtwo.png" id="2_4yhd1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8heu"]
+atlas = ExtResource("2_4yhd1")
+region = Rect2(0, 0, 144, 138)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvswv"]
+atlas = ExtResource("2_4yhd1")
+region = Rect2(144, 0, 144, 138)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_boyg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8heu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvswv")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80cx4"]
+size = Vector2(77, 85.5)
+
+[node name="Mewtwo" type="Area2D" unique_id=1672809045]
+script = ExtResource("1_bt768")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1942535752]
+position = Vector2(146, 363)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_boyg6")
+animation = &"fly"
+frame_progress = 0.70169425
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=255912422]
+position = Vector2(147.5, 368.75)
+shape = SubResource("RectangleShape2D_80cx4")
+debug_color = Color(0.8618978, 0.3307378, 0.38499266, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

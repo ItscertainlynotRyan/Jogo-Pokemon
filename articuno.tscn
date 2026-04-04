@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cenme4j5g6b1w"]
+
+[ext_resource type="Script" uid="uid://dwsf11dsxg2am" path="res://ice.gd" id="1_bjtmn"]
+[ext_resource type="Texture2D" uid="uid://bw7q0v2xgr48r" path="res://sprites/legendary birds.png" id="2_arcn2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5p1p"]
+atlas = ExtResource("2_arcn2")
+region = Rect2(0, 203, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhcbd"]
+atlas = ExtResource("2_arcn2")
+region = Rect2(325, 203, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1jbl"]
+atlas = ExtResource("2_arcn2")
+region = Rect2(650, 203, 325, 203)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5p1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5p1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhcbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1jbl")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_215e1"]
+radius = 49.162994
+
+[node name="Articuno" type="Area2D" unique_id=1752322203]
+script = ExtResource("1_bjtmn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=854970475]
+position = Vector2(740, 536.99994)
+scale = Vector2(0.4966485, 0.48333317)
+sprite_frames = SubResource("SpriteFrames_x5p1p")
+animation = &"fly"
+frame_progress = 0.1566925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=414486200]
+position = Vector2(732, 541)
+shape = SubResource("CircleShape2D_215e1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

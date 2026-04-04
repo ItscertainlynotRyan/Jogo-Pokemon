@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bk4f2dv45bfo6"]
+
+[ext_resource type="Script" uid="uid://bfv1wuch61cb" path="res://zapdos.gd" id="1_1ipkw"]
+[ext_resource type="Texture2D" uid="uid://bw7q0v2xgr48r" path="res://sprites/legendary birds.png" id="2_vsbr3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_215e1"]
+atlas = ExtResource("2_vsbr3")
+region = Rect2(0, 0, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sc4i"]
+atlas = ExtResource("2_vsbr3")
+region = Rect2(325, 0, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80cx4"]
+atlas = ExtResource("2_vsbr3")
+region = Rect2(650, 0, 325, 203)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8heu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_215e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sc4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80cx4")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lc2xo"]
+radius = 51.24451
+
+[node name="Zapdos" type="Area2D" unique_id=627726122]
+script = ExtResource("1_1ipkw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1817481411]
+position = Vector2(535.00006, 166.00002)
+scale = Vector2(0.479, 0.479)
+sprite_frames = SubResource("SpriteFrames_e8heu")
+animation = &"fly"
+frame_progress = 0.5452457
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1679626284]
+position = Vector2(529, 164)
+shape = SubResource("CircleShape2D_lc2xo")
+debug_color = Color(0.697663, 0.48961765, 0.18368462, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_zapdos_body_entered"]

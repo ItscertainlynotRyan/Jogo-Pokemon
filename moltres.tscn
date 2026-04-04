@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://d0r5wbtys8xai"]
+
+[ext_resource type="Script" uid="uid://df2mw3ma4qauo" path="res://fire.gd" id="1_rklp1"]
+[ext_resource type="Texture2D" uid="uid://bw7q0v2xgr48r" path="res://sprites/legendary birds.png" id="2_3n5ni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaj68"]
+atlas = ExtResource("2_3n5ni")
+region = Rect2(0, 406, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2p71"]
+atlas = ExtResource("2_3n5ni")
+region = Rect2(325, 406, 325, 203)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa8c5"]
+atlas = ExtResource("2_3n5ni")
+region = Rect2(650, 406, 325, 203)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hb5m1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaj68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2p71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa8c5")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8heu"]
+radius = 49.0
+height = 98.0
+
+[node name="Moltres" type="Area2D" unique_id=363989200]
+script = ExtResource("1_rklp1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1469861957]
+position = Vector2(1492, 517)
+scale = Vector2(0.49768534, 0.47874996)
+sprite_frames = SubResource("SpriteFrames_hb5m1")
+animation = &"fly"
+frame_progress = 0.278486
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=359920910]
+position = Vector2(1492, 518)
+shape = SubResource("CapsuleShape2D_e8heu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

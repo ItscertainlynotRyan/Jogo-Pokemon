@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cc6drn8rpexg5"]
+
+[ext_resource type="Script" uid="uid://cyaxhicv4i3vg" path="res://mew.gd" id="1_ugf30"]
+[ext_resource type="Texture2D" uid="uid://doofaprg5ei1u" path="res://sprites/Mew.png" id="2_tgxsn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boyg6"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(0, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e36ub"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(132, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb5m1"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(264, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b14r"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(396, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnpwn"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(528, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36jdj"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(660, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfvwf"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(792, 0, 132, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhpj7"]
+atlas = ExtResource("2_tgxsn")
+region = Rect2(924, 0, 132, 129)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7knny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boyg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e36ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb5m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b14r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnpwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36jdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfvwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhpj7")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8heu"]
+radius = 66.70832
+
+[node name="Mew" type="Area2D" unique_id=1648989491]
+script = ExtResource("1_ugf30")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=243012941]
+position = Vector2(748, 123)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_7knny")
+animation = &"fly"
+frame_progress = 0.2701287
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=958124723]
+position = Vector2(748, 126)
+shape = SubResource("CircleShape2D_e8heu")
+debug_color = Color(0.9063755, 0.2864131, 0.26799643, 0.41960785)

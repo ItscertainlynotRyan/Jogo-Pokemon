@@ -7,7 +7,7 @@ func _on_body_entered(body):
 # Esta função é chamada automaticamente quando algum corpo
 # (por exemplo, a bola) entra na área da estrela.
 
-	if body.name == "Ball":
+	if body.name == "Kangaskhan":
 		print("Tocou no Baby Khangaskan")
 		# Verifica se o objeto que entrou na área é a bola.
 		# Isso evita que outros objetos ativem a estrela.
