@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775263554
+::res://::1775397163
 articuno.tscn::PackedScene::5081170938282621030::1775261352::0::1::::<><><>0<>0<><>::uid://dwsf11dsxg2am::::res://ice.gd<>uid://bw7q0v2xgr48r::::res://sprites/legendary birds.png
 ball.gd::GDScript::6332927272644270672::1775262489::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ball.png::CompressedTexture2D::7492720437793363472::1775247103::1775247103::1::::<><><>0<>0<>23010d1d7d07500a69fd05bb2cf9950a<>res://.godot/imported/ball.png-9a4ca347acb7532f6ae347744a6b04f7.ctex::
@@ -19,16 +19,26 @@ spawner.gd::GDScript::2867323015554399783::1775261641::0::1::::<>Node2D<><>0<>0<
 star.gd::GDScript::1216842574365024415::1775260637::0::1::::<>Area2D<><>0<>0<><>::
 zapdos.gd::GDScript::81833406409219541::1775261770::0::1::::<>Area2D<><>0<>0<><>::
 zapdos.tscn::PackedScene::3148528067709129047::1775261336::0::1::::<><><>0<>0<><>::uid://bfv1wuch61cb::::res://zapdos.gd<>uid://bw7q0v2xgr48r::::res://sprites/legendary birds.png
-::res://canvas/::1775081940
+::res://canvas/::1775263358
 game_over_screen.png::CompressedTexture2D::5909427520617057441::1775081940::1775081940::1::::<><><>0<>0<>3bd77d6df14a8e46adea1bdcc5069fdd<>res://.godot/imported/game_over_screen.png-27f1aef9403498733e081e86ff03b3f8.ctex::
 restart_button.png::CompressedTexture2D::1066948651885836272::1775081940::1775081940::1::::<><><>0<>0<>dcec61792649eb33fd76e3531ee312c7<>res://.godot/imported/restart_button.png-835b17aca75d7929e034042b940fa665.ctex::
-::res://sprites/::1775257672
+::res://sprites/::1775263759
+articuno.png::CompressedTexture2D::8486866725612716250::1775263358::1775397164::1::::<><><>0<>0<>e338cbc12d6b9531f31682ccb9dbb694<>res://.godot/imported/articuno.png-bb7b9033dc8f2529dec84a83fb925c1e.ctex::
+ball.png::CompressedTexture2D::6406265503087767397::1775263358::1775397165::1::::<><><>0<>0<>0dc2db3f20f16ea578fe55890de2d5fb<>res://.godot/imported/ball.png-dbfca04ee0bd630c71df985dd5b09bcc.ctex::
+bomb.png::CompressedTexture2D::1613143894854829922::1775263358::1775263358::1::::<><><>0<>0<>71b1ca5bc2df7711ecb74df3b496f615<>res://.godot/imported/bomb.png-e64aff15375a44d3869552d2ac455436.ctex::
 DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Time _ Darkness - Pokemon (1st Generation) - Mew.png::CompressedTexture2D::3304968704408347303::1775255917::1775255917::1::::<><><>0<>0<>5ac643ffc5e68a5eb7eb23681c679805<>res://.godot/imported/DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Time _ Darkness - Pokemon (1st Generation) - Mew.png-dbfe0b1f73e7d76ad537a3a8cc1d0d0e.ctex::
+ember.png::CompressedTexture2D::1087294004250451792::1775263358::1775263358::1::::<><><>0<>0<>233a6c408830f10da4266aab23fd67ac<>res://.godot/imported/ember.png-166236ff5ac732fd9c0d358654e02b0b.ctex::
 floor.png::CompressedTexture2D::7334699820596856825::1775081941::1775081941::1::::<><><>0<>0<>f24490f17f853190cbbb019678d2ae25<>res://.godot/imported/floor.png-8870646e23ec8c3ad77089faabc9e773.ctex::
+heavy.png::CompressedTexture2D::8526959366124073769::1775263358::1775263358::1::::<><><>0<>0<>4836c67bc47e314e16e68fad0addb863<>res://.godot/imported/heavy.png-fcf81f926f3522af6b973e0b4f0b765b.ctex::
+ice.png::CompressedTexture2D::3549065943046300629::1775263358::1775263358::1::::<><><>0<>0<>0fcb877db8fd096227789842ad96e676<>res://.godot/imported/ice.png-0c1ed6b8c4de11f3b863ad9105ae6ec3.ctex::
 kangaskhan_1500x1100_transparent.png::CompressedTexture2D::5145028731703884681::1775081941::1775081941::1::::<><><>0<>0<>1624c34fffc0bab6f08e8f209ca4ce30<>res://.godot/imported/kangaskhan_1500x1100_transparent.png-09f91aef648b42524caccb1ea2023954.ctex::
 kangaskhan_transparent.png::CompressedTexture2D::698334662708496126::1775081941::1775081941::1::::<><><>0<>0<>fdd75ffc78db26903f241324eebe5335<>res://.godot/imported/kangaskhan_transparent.png-851f16efa391cb25fdfd9d64c60f135a.ctex::
 legendary birds.png::CompressedTexture2D::3997652594345420015::1775257671::1775257672::1::::<><><>0<>0<>19c9b2e5fe6f75708b1a066fdc765b7c<>res://.godot/imported/legendary birds.png-7a182f85afdaad2cba02297c0171fc91.ctex::
+light.png::CompressedTexture2D::6421787982550752800::1775263358::1775263358::1::::<><><>0<>0<>82e8f4947e24f3370839c7fb6a27d83d<>res://.godot/imported/light.png-191c2812e8968dabd6c4fd26c78b4e95.ctex::
 Mew.png::CompressedTexture2D::8171111549957222952::1775257291::1775257291::1::::<><><>0<>0<>eca2a93c8166ab025d91cb05f2874fc8<>res://.godot/imported/Mew.png-745d11f1c701ad7d8d3e2674fc70244b.ctex::
 Mewtwo.png::CompressedTexture2D::3957961212817829039::1775255762::1775255763::1::::<><><>0<>0<>f0046faf72a5aeac277b9ab95671358f<>res://.godot/imported/Mewtwo.png-47ae3fa1800b2fcc03e58172e1761e27.ctex::
+moltres.png::CompressedTexture2D::3593768045748728001::1775263358::1775263358::1::::<><><>0<>0<>00c745f58dfdc338472a38401b5d5a1f<>res://.godot/imported/moltres.png-686e59f9d3dfa8b7f6cb517812ad23a3.ctex::
 power.png::CompressedTexture2D::7392121551949064019::1775081941::1775081941::1::::<><><>0<>0<>d14c3924b6461b9a8da99173c383fed8<>res://.godot/imported/power.png-5efa3d4705ebe267dac8deba72f7204d.ctex::
 rocket ball.png::CompressedTexture2D::5670880286162616732::1775252614::1775252614::1::::<><><>0<>0<>95441940ccb4f0835275ea6ffa7b3170<>res://.godot/imported/rocket ball.png-6ad84a0e3e982f2771475328e99814d2.ctex::
+star.png::CompressedTexture2D::5620254128591733975::1775263358::1775263358::1::::<><><>0<>0<>c057f840b9481084711e89de756896be<>res://.godot/imported/star.png-b168e13ae1f9d03011573f475e49f2fb.ctex::
+zapdos.png::::-1::1775263358::1775263358::0::::<><><>0<>0<>0eab427309a57bd56b0c3ffbd49cd983<>::

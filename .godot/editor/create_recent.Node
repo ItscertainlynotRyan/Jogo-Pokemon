@@ -1,9 +1,10 @@
-Node2D
-AnimatedSprite2D
 CollisionShape2D
 Area2D
-CharacterBody2D
+Timer
+Node2D
 Label
+AnimatedSprite2D
+CharacterBody2D
 Sprite2D
 TextureRect
 Button
@@ -11,4 +12,3 @@ VBoxContainer
 CenterContainer
 Control
 Panel
-CanvasLayer

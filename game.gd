@@ -14,6 +14,9 @@ var original_gravity = 400
 var game_time = 0
 var difficulty_scale = 1.0
 
+# escala de efeitos
+var effect_multiplier = 1.0
+
 # spawn
 var spawn_timer = 0
 var spawn_interval = 3.0
@@ -24,7 +27,8 @@ var spawn_interval = 3.0
 @onready var game_over_ui = $GameOverUI
 @onready var game_over_text = $GameOverUI/Control/CenterContainer/TextureRect/VBoxContainer/GameOverText
 @onready var effect_label = $EffectLabel
-@onready var player = $Player # 👈 importante
+@onready var difficulty_label: Label = $DifficultyLabel
+@onready var player = $Player
 
 func _ready():
 	randomize()
@@ -33,32 +37,52 @@ func _ready():
 func _process(delta):
 	game_time += delta
 
-	# aumenta dificuldade a cada 10s
-	if int(game_time) % 10 == 0:
-		increase_difficulty()
+	# 🔥 dificuldade progressiva contínua
+	update_difficulty()
 
-	# controle de spawn
+	# escala de efeitos (mantido)
+	update_effect_scaling()
+
+	# spawn
 	spawn_timer += delta
 	if spawn_timer >= spawn_interval:
 		spawn_pokemon()
 		spawn_timer = 0
 
 # ------------------ DIFICULDADE ------------------
-func increase_difficulty():
-	difficulty_scale += 0.1
-	spawn_interval = max(0.8, spawn_interval - 0.2)
+func update_difficulty():
+	# escala com o tempo
+	difficulty_scale = 1 + (game_time / 30.0)
 
-	print("Dificuldade:", difficulty_scale)
+	# spawn cada vez mais rápido
+	spawn_interval = max(0.4, 3.0 - (game_time / 20.0))
+
+	# mostra na tela
+	difficulty_label.text = "Dificuldade: %.1f" % difficulty_scale
+
+# ------------------ ESCALA DE EFEITOS ------------------
+func update_effect_scaling():
+	if game_time >= 120:
+		effect_multiplier = 3.0
+	elif game_time >= 60:
+		effect_multiplier = 2.0
+	else:
+		effect_multiplier = 1.0
 
 # ------------------ SPAWN ------------------
 func spawn_pokemon():
 	if pokemon_scenes.is_empty():
 		return
+
+	# 🔥 limite dinâmico de inimigos
+	var max_enemies = 20 + int(game_time / 10)
+
+	if get_tree().get_nodes_in_group("enemies").size() >= max_enemies:
+		return
 	
 	var scene = pokemon_scenes.pick_random()
 	var pokemon = scene.instantiate()
 
-	# posição longe do player
 	var pos: Vector2
 	
 	while true:
@@ -72,7 +96,7 @@ func spawn_pokemon():
 
 	pokemon.position = pos
 
-	# aplica dificuldade no pokemon
+	# aplica dificuldade nos pokémons
 	if pokemon.has_method("set_difficulty"):
 		pokemon.set_difficulty(difficulty_scale)
 
@@ -84,11 +108,15 @@ func apply_effect(effect_name):
 		return
 	
 	is_effect_active = true
-	effect_time = 5
+	
+	effect_time = 5 * effect_multiplier
+	
+	print("🔥 Tempo do efeito:", effect_time)
 
 	speed = original_speed
 	gravity = original_gravity
 
+	effect_label.text = effect_name
 
 	var timer = Timer.new()
 	timer.wait_time = effect_time
@@ -101,6 +129,7 @@ func reset_effect():
 	speed = original_speed
 	gravity = original_gravity
 	is_effect_active = false
+	
 	effect_label.text = ""
 
 # ------------------ SCORE ------------------
@@ -118,6 +147,5 @@ func _on_restart_pressed():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
-
 func _on_mew_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	pass

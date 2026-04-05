@@ -39,14 +39,15 @@ radius = 49.162994
 script = ExtResource("1_bjtmn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=854970475]
-position = Vector2(740, 536.99994)
+position = Vector2(727.99994, 160)
 scale = Vector2(0.4966485, 0.48333317)
 sprite_frames = SubResource("SpriteFrames_x5p1p")
 animation = &"fly"
-frame_progress = 0.1566925
+autoplay = "fly"
+frame_progress = 0.41504297
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=414486200]
-position = Vector2(732, 541)
+position = Vector2(727, 162)
 shape = SubResource("CircleShape2D_215e1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -40,14 +40,14 @@ height = 98.0
 script = ExtResource("1_rklp1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1469861957]
-position = Vector2(1492, 517)
+position = Vector2(723, 457)
 scale = Vector2(0.49768534, 0.47874996)
 sprite_frames = SubResource("SpriteFrames_hb5m1")
 animation = &"fly"
-frame_progress = 0.278486
+frame_progress = 0.31370127
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=359920910]
-position = Vector2(1492, 518)
+position = Vector2(714, 458)
 shape = SubResource("CapsuleShape2D_e8heu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -8,5 +8,5 @@ func _ready() -> void:
 # Mude para este nome exato:
 func _on_zapdos_body_entered(body: Node2D) -> void:
 	if body.name == "Kangaskhan" or body.is_in_group("player"):   # melhor usar grupo
-		print("Foi atingido pelo Mewtwo")   # ← mude o texto depois
+		print("Foi atingido pelo Zapdos")   # ← mude o texto depois
 		body.apply_effect("paralyzed")
