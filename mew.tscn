@@ -84,3 +84,5 @@ frame_progress = 0.2701287
 position = Vector2(748, 126)
 shape = SubResource("CircleShape2D_e8heu")
 debug_color = Color(0.9063755, 0.2864131, 0.26799643, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

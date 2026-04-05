@@ -1,18 +1,19 @@
 extends CharacterBody2D
 
+# --- Movimento e físicas ---
 var gravity = 900
 var original_gravity = 900
-
 var bounce = -60
 var speed = 200
 var original_speed = 200
+var reverse_control = false
 
+# --- Efeitos ---
 var is_effect_active = false
 var effect_time = 0
 var current_effect = ""
 
-var reverse_control = false
-
+# --- UI ---
 @onready var effect_label = get_parent().get_node("EffectLabel")
 
 func _physics_process(delta):
@@ -31,11 +32,11 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	# ------------------ TIMER ------------------
+	# Timer dos efeitos
 	if is_effect_active:
 		effect_time -= delta
 
-	# ------------------ UI ------------------
+	# Atualiza UI
 	if effect_label:
 		match current_effect:
 			"ice":
@@ -49,14 +50,13 @@ func _physics_process(delta):
 			"mew":
 				effect_label.text = "✨ LIMPEZA TOTAL!"
 
-	# ------------------ FINALIZA ------------------
 	if effect_time <= 0:
 		reset_all_effects()
 
 
-# ------------------ APLICAR EFEITO ------------------
+# --- Aplicar efeito ---
 func apply_effect(effect_name):
-	# Se for Mew, ignora tudo
+	# Mew é supremo: sempre zera outros efeitos
 	if effect_name == "mew":
 		reset_all_effects()
 		clear_enemies()
@@ -65,7 +65,7 @@ func apply_effect(effect_name):
 		effect_time = 5
 		return
 
-	# efeitos normais
+	# Efeitos normais só se não houver outro ativo
 	if is_effect_active:
 		return
 
@@ -94,13 +94,13 @@ func apply_effect(effect_name):
 			gravity = 0.0
 
 
-# ------------------ LIMPAR INIMIGOS ------------------
+# --- Limpar inimigos ---
 func clear_enemies():
 	for enemy in get_tree().get_nodes_in_group("enemies"):
 		enemy.queue_free()
 
 
-# ------------------ RESET ------------------
+# --- Reset de efeitos ---
 func reset_all_effects():
 	speed = original_speed
 	gravity = original_gravity
@@ -111,10 +111,3 @@ func reset_all_effects():
 
 	if effect_label:
 		effect_label.text = ""
-
-
-# ------------------ PEGAR MEW ------------------
-func _on_mew_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		apply_effect("mew")
-		print("Mew coletado! Todos os inimigos eliminados!")

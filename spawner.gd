@@ -22,14 +22,14 @@ func _ready():
 func _on_timer_timeout():
 	spawn_pokemon()
 
+
 func spawn_pokemon():
-	# limite na tela
-	if get_child_count() > 15:
+	# limite de inimigos na tela
+	if get_tree().get_nodes_in_group("enemies").size() > 25:
 		return
 
-	# segurança (evita erro)
 	if spawn_area == null:
-		print("ERRO: Spawn_Area não foi definido!")
+		print("ERRO: spawn_area não definido!")
 		return
 
 	var shape_node = spawn_area.get_node("CollisionShape2D")
@@ -50,10 +50,30 @@ func spawn_pokemon():
 
 	var pokemon = pokemon_scene.instantiate()
 
-	# spawn dentro da área
-	var x = randf_range(area_pos.x - extents.x, area_pos.x + extents.x)
-	var y = randf_range(area_pos.y - extents.y, area_pos.y + extents.y)
+	# spawn dentro da área e sem sobreposição
+	var safe_distance = 100  # distância mínima entre inimigos
+	var tries = 0
+	var pos: Vector2
 
-	pokemon.position = Vector2(x, y)
+	while true:
+		pos = Vector2(
+			randf_range(area_pos.x - extents.x, area_pos.x + extents.x),
+			randf_range(area_pos.y - extents.y, area_pos.y + extents.y)
+		)
 
+		var overlap = false
+		for enemy in get_tree().get_nodes_in_group("enemies"):
+			if pos.distance_to(enemy.position) < safe_distance:
+				overlap = true
+				break
+
+		if not overlap:
+			break
+
+		tries += 1
+		if tries > 50:  # evita loop infinito
+			break
+
+	pokemon.position = pos
 	add_child(pokemon)
+	pokemon.add_to_group("enemies")
