@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775433868
+::res://::1775502630
 articuno.tscn::PackedScene::5081170938282621030::1775421798::0::1::::<><><>0<>0<><>::uid://dwsf11dsxg2am::::res://ice.gd<>uid://bw7q0v2xgr48r::::res://sprites/legendary birds.png
 ball.gd::GDScript::6332927272644270672::1775431346::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ball.png::CompressedTexture2D::7492720437793363472::1775247103::1775247103::1::::<><><>0<>0<>23010d1d7d07500a69fd05bb2cf9950a<>res://.godot/imported/ball.png-9a4ca347acb7532f6ae347744a6b04f7.ctex::
@@ -7,7 +7,7 @@ bomb.gd::GDScript::4375708573898935293::1775260637::0::1::::<>Area2D<><>0<>0<><>
 difficulty_label.gd::GDScript::3616906044021583439::1775416951::0::1::::<>Label<><>0<>0<><>::
 fire.gd::GDScript::7566713849239024646::1775420305::0::1::::<>Area2D<><>0<>0<><>::
 game.gd::GDScript::5255479611299046008::1775423117::0::1::::<>Node2D<><>0<>0<><>::
-game.tscn::PackedScene::5888374998261582940::1775433541::0::1::::<><><>0<>0<><>::uid://cwhynfj3cxrhg::::res://ball.gd<>uid://cg418mpquegyq::::res://game.gd<>uid://bsfk8i6yrd7vx::::res://sky_background.gd<>uid://cfkj4vp7jkirh::::res://sprites/kangaskhan_1500x1100_transparent.png<>uid://j7jp8fv8aaly::::res://sprites/kangaskhan_transparent.png<>uid://dtai4gvq854ep::::res://backgrounds/5wPfx.jpg<>uid://rlphpv7wm52r::::res://star.gd<>uid://bwx3u61uqgfox::::res://backgrounds/50W1n.jpg<>uid://d3uv0ljyt5ywr::::res://backgrounds/cFApq.jpg<>uid://ypyf21i7er24::::res://backgrounds/DLeaq.jpg<>uid://b3lvjs0ajpaqv::::res://bomb.gd<>uid://lhx42fet5vxs::::res://backgrounds/O3LNo.jpg<>uid://cm2atmw6bmmeu::::res://sprites/rocket ball.png<>uid://bq8apuwnsy8jg::::res://backgrounds/rJBlG.jpg<>uid://cqgtn4rtjnkgv::::res://canvas/game_over_screen.png<>uid://pg3quuuon3yi::::res://canvas/restart_button.png<>uid://bg37nkftg8yyp::::res://spawner.gd<>uid://brsb6cyea72v0::::res://difficulty_label.gd
+game.tscn::PackedScene::5888374998261582940::1775436883::0::1::::<><><>0<>0<><>::uid://cwhynfj3cxrhg::::res://ball.gd<>uid://cg418mpquegyq::::res://game.gd<>uid://bsfk8i6yrd7vx::::res://sky_background.gd<>uid://cfkj4vp7jkirh::::res://sprites/kangaskhan_1500x1100_transparent.png<>uid://j7jp8fv8aaly::::res://sprites/kangaskhan_transparent.png<>uid://dtai4gvq854ep::::res://backgrounds/5wPfx.jpg<>uid://rlphpv7wm52r::::res://star.gd<>uid://bwx3u61uqgfox::::res://backgrounds/50W1n.jpg<>uid://d3uv0ljyt5ywr::::res://backgrounds/cFApq.jpg<>uid://ypyf21i7er24::::res://backgrounds/DLeaq.jpg<>uid://b3lvjs0ajpaqv::::res://bomb.gd<>uid://lhx42fet5vxs::::res://backgrounds/O3LNo.jpg<>uid://cm2atmw6bmmeu::::res://sprites/rocket ball.png<>uid://bq8apuwnsy8jg::::res://backgrounds/rJBlG.jpg<>uid://cqgtn4rtjnkgv::::res://canvas/game_over_screen.png<>uid://pg3quuuon3yi::::res://canvas/restart_button.png<>uid://bg37nkftg8yyp::::res://spawner.gd<>uid://brsb6cyea72v0::::res://difficulty_label.gd
 ice.gd::GDScript::8740926797384808600::1775419254::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::7968722327326947584::1775081939::1775081939::1::::<><><>0<>0<>210089327f94e007310510a00a1af6d5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 mew.gd::GDScript::6458783030359597424::1775426317::0::1::::<>Area2D<><>0<>0<><>::
@@ -17,7 +17,7 @@ mewtwo.tscn::PackedScene::6629928086282609862::1775261903::0::1::::<><><>0<>0<><
 moltres.tscn::PackedScene::8950938444088492492::1775421299::0::1::::<><><>0<>0<><>::uid://df2mw3ma4qauo::::res://fire.gd<>uid://bw7q0v2xgr48r::::res://sprites/legendary birds.png
 score.gd::GDScript::2164599271413442830::1775081939::0::1::::<>Label<><>0<>0<><>::
 sky_background.gd::GDScript::3660808328263570633::1775431228::0::1::::<>TextureRect<><>0<>0<><>::
-spawner.gd::GDScript::2867323015554399783::1775433762::0::1::::<>Node2D<><>0<>0<><>::
+spawner.gd::GDScript::2867323015554399783::1775433986::0::1::::<>Node2D<><>0<>0<><>::
 star.gd::GDScript::1216842574365024415::1775260637::0::1::::<>Area2D<><>0<>0<><>::
 zapdos.gd::GDScript::81833406409219541::1775423355::0::1::::<>Area2D<><>0<>0<><>::
 zapdos.tscn::PackedScene::3148528067709129047::1775261336::0::1::::<><><>0<>0<><>::uid://bfv1wuch61cb::::res://zapdos.gd<>uid://bw7q0v2xgr48r::::res://sprites/legendary birds.png
