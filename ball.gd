@@ -32,6 +32,11 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+	# --------- LIMITAR PLAYER DENTRO DA TELA ---------
+	var screen_size = get_viewport_rect().size
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
+
 	# Timer dos efeitos
 	if is_effect_active:
 		effect_time -= delta

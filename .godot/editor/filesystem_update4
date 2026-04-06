@@ -1,12 +1,2 @@
-res://game.tscn
-res://game.gd
-res://ice.gd
 res://spawner.gd
-res://ball.gd
-res://mew.gd
-res://fire.gd
-res://mewtwo.gd
-res://mew.tscn
-res://moltres.tscn
-res://articuno.tscn
-res://zapdos.gd
+res://game.tscn

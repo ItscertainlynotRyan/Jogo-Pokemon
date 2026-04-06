@@ -5,15 +5,10 @@
 [ext_resource type="Script" uid="uid://bsfk8i6yrd7vx" path="res://sky_background.gd" id="2_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://cfkj4vp7jkirh" path="res://sprites/kangaskhan_1500x1100_transparent.png" id="3_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://j7jp8fv8aaly" path="res://sprites/kangaskhan_transparent.png" id="3_215e1"]
-[ext_resource type="Texture2D" uid="uid://dtai4gvq854ep" path="res://backgrounds/5wPfx.jpg" id="3_boyg6"]
+[ext_resource type="Texture2D" uid="uid://dcq8o1g6mcx4t" path="res://sprites/floor.png" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://rlphpv7wm52r" path="res://star.gd" id="4_7jktm"]
-[ext_resource type="Texture2D" uid="uid://bwx3u61uqgfox" path="res://backgrounds/50W1n.jpg" id="4_e36ub"]
-[ext_resource type="Texture2D" uid="uid://d3uv0ljyt5ywr" path="res://backgrounds/cFApq.jpg" id="5_hb5m1"]
-[ext_resource type="Texture2D" uid="uid://ypyf21i7er24" path="res://backgrounds/DLeaq.jpg" id="6_x5p1p"]
 [ext_resource type="Script" uid="uid://b3lvjs0ajpaqv" path="res://bomb.gd" id="7_j5wjh"]
-[ext_resource type="Texture2D" uid="uid://lhx42fet5vxs" path="res://backgrounds/O3LNo.jpg" id="7_qhcbd"]
 [ext_resource type="Texture2D" uid="uid://cm2atmw6bmmeu" path="res://sprites/rocket ball.png" id="8_215e1"]
-[ext_resource type="Texture2D" uid="uid://bq8apuwnsy8jg" path="res://backgrounds/rJBlG.jpg" id="8_f1jbl"]
 [ext_resource type="Texture2D" uid="uid://cqgtn4rtjnkgv" path="res://canvas/game_over_screen.png" id="9_vef74"]
 [ext_resource type="Texture2D" uid="uid://pg3quuuon3yi" path="res://canvas/restart_button.png" id="10_hve3p"]
 [ext_resource type="Script" uid="uid://bg37nkftg8yyp" path="res://spawner.gd" id="16_hb5m1"]
@@ -38,54 +33,20 @@ texture = ExtResource("10_hve3p")
 texture = ExtResource("10_hve3p")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iotsf"]
-size = Vector2(1151, 495)
+size = Vector2(1197, 486)
 
 [node name="Game" type="Node2D" unique_id=1995502021]
 position = Vector2(9, 0)
 script = ExtResource("1_ryrav")
 
 [node name="SkyBackground" type="TextureRect" parent="." unique_id=195808012]
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_lc2xo")
-morning = ExtResource("3_boyg6")
-afternoon = ExtResource("4_e36ub")
-golden = ExtResource("5_hb5m1")
-sunset = ExtResource("6_x5p1p")
-night_early = ExtResource("7_qhcbd")
-night_deep = ExtResource("8_f1jbl")
-
-[node name="Score" type="Label" parent="." unique_id=999431205]
-custom_minimum_size = Vector2(1, 1)
-offset_left = 4.0
-offset_top = -3.0
-offset_right = 188.0
-offset_bottom = 52.0
-theme_override_font_sizes/font_size = 40
-text = "Score: 0"
-horizontal_alignment = 2
-
-[node name="EffectLabel" type="Label" parent="." unique_id=268714187]
-offset_left = 21.0
-offset_top = 62.0
-offset_right = 61.0
-offset_bottom = 85.0
-
-[node name="DifficultyLabel" type="Label" parent="." unique_id=561440513]
-offset_left = 25.0
-offset_top = 49.0
-offset_right = 65.0
-offset_bottom = 72.0
-script = ExtResource("17_e8heu")
-
-[node name="MewTimerLabel" type="Label" parent="." unique_id=1161162803]
-offset_left = 24.0
-offset_top = 75.0
-offset_right = 64.0
-offset_bottom = 98.0
 
 [node name="Kangaskhan" type="CharacterBody2D" parent="." unique_id=1822478534]
 position = Vector2(324, 184)
@@ -104,12 +65,36 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_fc0e3")
 debug_color = Color(0.8088083, 0.40621147, 0.21446604, 0.41960785)
 
+[node name="Score" type="Label" parent="." unique_id=999431205]
+custom_minimum_size = Vector2(1, 1)
+offset_left = 4.0
+offset_top = -3.0
+offset_right = 188.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+horizontal_alignment = 2
+
+[node name="EffectLabel" type="Label" parent="." unique_id=268714187]
+offset_left = 17.0
+offset_top = 62.0
+offset_right = 57.0
+offset_bottom = 85.0
+
+[node name="DifficultyLabel" type="Label" parent="." unique_id=561440513]
+offset_left = 25.0
+offset_top = 49.0
+offset_right = 65.0
+offset_bottom = 72.0
+script = ExtResource("17_e8heu")
+
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1572618990]
 position = Vector2(307, 329)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2027265510]
-position = Vector2(289.99997, 202)
+position = Vector2(289.49997, 203)
 scale = Vector2(0.95377606, 0.3388672)
+texture = ExtResource("3_feb5d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1037970149]
 position = Vector2(289, 231)
@@ -195,18 +180,18 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxTexture_mfdv2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hve3p")
 
-[node name="Spawner" type="Node2D" parent="." unique_id=1208031120]
+[node name="Spawner" type="Node2D" parent="." unique_id=1208031120 node_paths=PackedStringArray("spawn_area")]
 position = Vector2(20, 53)
 script = ExtResource("16_hb5m1")
+spawn_area = NodePath("Spawn_Area")
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=500680106]
 autostart = true
 
 [node name="Spawn_Area" type="Area2D" parent="Spawner" unique_id=492890871]
-position = Vector2(-32, -62)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawner/Spawn_Area" unique_id=1837623541]
-position = Vector2(600, 280)
+position = Vector2(566.5, 195)
 shape = SubResource("RectangleShape2D_iotsf")
 
 [connection signal="body_entered" from="BabyKangaskhan" to="BabyKangaskhan" method="_on_body_entered"]

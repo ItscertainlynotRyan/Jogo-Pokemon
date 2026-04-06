@@ -3,7 +3,8 @@ extends Node2D
 @onready var timer = $Timer
 
 # 👇 você vai arrastar o Spawn_Area aqui no editor
-@export var spawn_area: Node2D
+
+@onready var spawn_area: Area2D = $Spawn_Area
 
 # comuns
 var common_pokemons = [

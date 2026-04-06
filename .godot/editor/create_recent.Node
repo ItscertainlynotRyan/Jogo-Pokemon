@@ -1,14 +1,14 @@
+Label
+AnimationPlayer
+TextureRect
 CollisionShape2D
 Area2D
 Timer
 Node2D
-Label
 AnimatedSprite2D
 CharacterBody2D
 Sprite2D
-TextureRect
 Button
 VBoxContainer
 CenterContainer
 Control
-Panel
